@@ -1,5 +1,6 @@
 package com.taurunium.stopwatch
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         loadTypeface()
         loadAndSetAnimation()
         initUI()
-
+        setClickListeners()
     }
 
     private fun loadTypeface(){
@@ -51,5 +52,13 @@ class MainActivity : AppCompatActivity() {
         binding.tvSplash.typeface = MRegular
         binding.tvSubSplash.typeface = MLight
         binding.btnGet.typeface = MMedium
+    }
+
+    private fun setClickListeners(){
+        binding.btnGet.setOnClickListener{
+            var intent: Intent = Intent(MainActivity@this, StopwatchActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
     }
 }

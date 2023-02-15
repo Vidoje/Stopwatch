@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#211D44"
+    android:background="@color/main_blue"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ivSplash"
-        android:layout_width="380dp"
-        android:layout_height="380dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/icget"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:src="@drawable/hand_stopwatch"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

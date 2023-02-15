@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Stopwatch</string>
+    <string name="healthy_on_you">Healthy On You</string>
+    <string name="get_started">Get Started</string>
 </resources>
